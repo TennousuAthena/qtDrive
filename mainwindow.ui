@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main Window</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* 设置主窗口背景颜色 */
+    QMainWindow {
+        background-color: #34495e;
+    }
+
+    /* 设置标签的样式 */
+    QLabel {
+        color: #ecf0f1;
+        font-size: 14pt;
+    }
+
+    /* 设置按钮的样式 */
+    QPushButton {
+        background-color: #e74c3c;
+        border: none;
+        color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12pt;
+    }
+
+    QPushButton:hover {
+        background-color: #c0392b;
+    }
+
+    QPushButton:pressed {
+        background-color: #e74c3c;
+        border: 1px solid #c0392b;
+    }
+
+    /* 设置警报标签的样式 */
+    QLabel#label_alarm {
+        color: #e74c3c;
+        font-size: 20pt;
+        font-weight: bold;
+    }
+
+    /* 设置普通信息标签的样式 */
+    QLabel#label_info {
+        color: #ecf0f1;
+        font-size: 12pt;
+    }
+
+    /* 设置时间标签的样式 */
+    QLabel#label_time {
+        color: #ecf0f1;
+        font-size: 36pt;
+        font-weight: bold;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_1">
+      <item>
+       <widget class="QLabel" name="label_work">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:38pt;&quot;&gt;Driving&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_time">
+        <property name="text">
+         <string>10:25</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_alarm">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;⚠&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_work_remain">
+        <property name="text">
+         <string>Work Remain</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_work_remain_time">
+        <property name="text">
+         <string>5:50</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_total_work">
+        <property name="text">
+         <string>Total Work</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_total_work_time">
+        <property name="text">
+         <string>2:10</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_total_rest">
+        <property name="text">
+         <string>Total Rest</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_total_rest_time">
+        <property name="text">
+         <string>0:15:27</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_current_rest">
+        <property name="text">
+         <string>Current Rest</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="label_current_rest_time">
+        <property name="styleSheet">
+         <string notr="true">color: #e74c3c;</string>
+        </property>
+        <property name="text">
+         <string>0:15:27</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_next_rest">
+        <property name="text">
+         <string>Next Rest Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="label_next_rest_time">
+        <property name="text">
+         <string>11:10</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_last_rest">
+        <property name="text">
+         <string>Last Rest Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="label_last_rest_time">
+        <property name="text">
+         <string>10:10</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton_sos">
+        <property name="text">
+         <string>SOS</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

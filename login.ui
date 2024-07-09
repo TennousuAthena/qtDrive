@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Neusoft Vehicle Central Control System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* 设置对话框背景颜色 */
+    QDialog {
+        background-color: #2c3e50;
+    }
+
+    /* 设置标题标签的样式 */
+    QLabel#label_title {
+        color: #ecf0f1;
+        font-size: 18pt;
+        font-weight: bold;
+    }
+
+    /* 设置标签的样式 */
+    QLabel {
+        color: #ecf0f1;
+        font-size: 10pt;
+    }
+
+    /* 设置文本框的样式 */
+    QLineEdit {
+        background-color: #34495e;
+        border: 1px solid #ecf0f1;
+        color: #ecf0f1;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+    /* 设置按钮的样式 */
+    QPushButton {
+        background-color: #1abc9c;
+        border: none;
+        color: #ecf0f1;
+        padding: 10px;
+        border-radius: 3px;
+    }
+
+    QPushButton:hover {
+        background-color: #16a085;
+    }
+
+    QPushButton:pressed {
+        background-color: #1abc9c;
+        border: 1px solid #16a085;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="text">
+      <string>Neusoft VCCS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_account">
+       <property name="text">
+        <string>Account</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_account"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_password">
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_password">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_login">
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_cancel">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
